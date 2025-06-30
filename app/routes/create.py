@@ -16,6 +16,7 @@ def create_learner():
         phone=data.get('phone'),
         county=data.get('county')
     )
+    
     db.session.add(learner)
     db.session.commit()
     return jsonify({"message": "Learner created", "id": learner.school_id}), 201
